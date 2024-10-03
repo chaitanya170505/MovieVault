@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= movie.Title || 'Movie Details' %></title>
+    <link rel="stylesheet" href="/css/homesearch.css">
+</head>
+<body>
+    <div class="movie-card">
+        <div class="movie-poster">
+            <img src="<%= movie.Poster || 'default-poster.jpg' %>" alt="Movie Poster">
+        </div>
+        <div class="movie-info">
+            <h2 class="movie-title"><%= movie.Title || 'Title not available' %></h2>
+            <% if (movie.imdbRating) { %>
+                <p class="movie-rating">IMDb Rating: <%= movie.imdbRating %></p>
+            <% } else { %>
+                <p class="movie-rating">IMDb Rating: Not available</p>
+            <% } %>
+
+            <% if (movie.Released) { %>
+                <p class="movie-release">Release Date: <%= movie.Released %></p>
+            <% } else { %>
+                <p class="movie-release">Release Date: Not available</p>
+            <% } %>
+
+            <% if (movie.Runtime) { %>
+                <p class="movie-runtime">Runtime: <%= movie.Runtime %></p>
+            <% } else { %>
+                <p class="movie-runtime">Runtime: Not available</p>
+            <% } %>
+
+            <% if (movie.Director) { %>
+                <p class="movie-director">Director: <%= movie.Director %></p>
+            <% } else { %>
+                <p class="movie-director">Director: Not available</p>
+            <% } %>
+
+            <% if (movie.Writer) { %>
+                <p class="movie-writer">Writer: <%= movie.Writer %></p>
+            <% } else { %>
+                <p class="movie-writer">Writer: Not available</p>
+            <% } %>
+
+            <% if (movie.Genre) { %>
+                <p class="movie-genre">Genre: <%= movie.Genre %></p>
+            <% } else { %>
+                <p class="movie-genre">Genre: Not available</p>
+            <% } %>
+
+            <% if (movie.Plot) { %>
+                <p class="movie-plot">Plot: <%= movie.Plot %></p>
+            <% } else { %>
+                <p class="movie-plot">Plot: Not available</p>
+            <% } %>
+
+            <% if (movie.Language) { %>
+                <p class="movie-language">Language: <%= movie.Language %></p>
+            <% } else { %>
+                <p class="movie-language">Language: Not available</p>
+            <% } %>
+
+            <% if (movie.Country) { %>
+                <p class="movie-country">Country: <%= movie.Country %></p>
+            <% } else { %>
+                <p class="movie-country">Country: Not available</p>
+            <% } %>
+
+            <% if (movie.Awards) { %>
+                <p class="movie-awards">Awards: <%= movie.Awards %></p>
+            <% } else { %>
+                <p class="movie-awards">Awards: Not available</p>
+            <% } %>
+
+            <% if (movie.Actors) { %>
+                <p class="movie-actors">Cast: <%= movie.Actors %></p>
+            <% } else { %>
+                <p class="movie-actors">Cast: Not available</p>
+            <% } %>
+
+            <% if (user) { %> 
+                
+                <div class="movie-buttons">
+                        <button onclick="addToWatchlist('<%= movie.imdbID %>', '<%= movie.Title %>', '<%= movie.Poster %>', '<%= movie.Plot %>')" class="btn-watchlist movie-buttons">Add to Watch List</button>
+                        <button onclick="addToFavorites('<%= movie.imdbID %>', '<%= movie.Title %>', '<%= movie.Poster %>', '<%= movie.Plot %>')" class="btn-favorites movie-buttons">Add to Favorites</button>
+                </div>
+                
+            <% } %>
+
+        </div>
+    </div>
+    <script src="/js/buttons.js"></script>
+</body>
+</html>

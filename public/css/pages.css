@@ -1,0 +1,97 @@
+.favorites-section{
+    background-color: #c4c2c2;
+    height: 100%;
+    min-width: fit-content;
+    padding: 20px;
+  }
+
+  .watchlist-section{
+    background-color: #c4c2c2;
+    min-height: fit-content;
+    height: 100%;
+    padding: 20px;
+  }
+  
+  .heading { 
+     padding-top: 10px;
+     text-align: center;
+  }
+  
+  .movie-display-container {
+      background-color: #e5e5e5;
+      max-height: 350px;
+      min-width: fit-content;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      margin-left: 10%;
+      margin-right: 10%;
+      margin-top: 20px;
+      gap: 20px;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .movie-display-img-container {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  
+  .movie-display-img {
+      max-width: 100%;
+      max-height: 250px;
+      border-radius: 8px;
+  }
+  
+  .movie-display-heading {
+      font-size: 24px;
+      margin: 0 0 10px;
+  }
+
+  .movie-display-description{
+    min-height: fit-content;
+  }
+  
+  .movie-display-description p {
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 10px;
+  }
+  
+  .movie-display-description a {
+      text-decoration: none;
+      color: #0d9f9c;
+      font-weight: bold;
+      margin-right: 15px;
+  }
+  
+  .movie-display-description a:hover {
+      text-decoration: underline;
+  }
+  
+  @media (max-width: 768px) {
+      .movie-display-img {
+          height: 100%;
+          max-height: 100%;
+      }
+  }
+  
+  .movie-links{
+      display: flex;
+      flex-direction: row;
+  }
+  
+
+/*style for no movies para*/
+.empty-list{
+    height: 90%;
+    text-align: center;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

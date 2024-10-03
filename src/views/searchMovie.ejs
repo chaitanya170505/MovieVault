@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/searchMovie.css">
+</head>
+<body>
+    
+    <% if (movies && movies.length > 0) { %>
+        <% movies.forEach(movie => { %>
+                <div class="movie-card">
+                    <div class="movie-poster">
+                        <% if (movie.Poster && movie.Poster !== "N/A") { %>
+                            <img src="<%= movie.Poster %>" alt="Movie Poster">
+                          <% } else { %>
+                            <img src="/assets/notfound.jpg" alt="Poster Not Found">
+                          <% } %>
+                    </div>
+                    <div class="movie-info">
+                        <h2 class="movie-title"><%= movie.Title || 'Title not available' %></h2>
+                        <% if (movie.Year) { %>
+                            <p class="movie-release">Release Year: <%= movie.Year %></p>
+                        <% } else { %>
+                            <p class="movie-release">Release Date: Not available</p>
+                        <% } %>
+                        <% if (movie.imdbID) { %>
+                            <p class="movie-release">imdbID: <%= movie.imdbID %></p>
+                        <% } else { %>
+                            <p class="movie-release">imdbID: Not available</p>
+                        <% } %>
+
+                        <a href="/homeSearch?movieTitle=<%= movie.imdbID %>" class="get-details-btn">More Info</a>
+
+                    </div>
+                </div>
+        <% }) %>
+     
+
+    <% } else { %>
+        
+        <h1>no result found</h1>
+
+    <% } %>
+    
+    
+    
+</body>
+</html>

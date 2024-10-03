@@ -1,0 +1,333 @@
+<%- include('partials/header') %>
+
+<section class="carousel">
+
+    <div class="carousel-container">
+        <div class="carousel-slide active">
+            <img src="/assets/carousel1.png" alt="Slide 1">
+        </div>
+        <div class="carousel-slide">
+            <img src="/assets/carousel3.png" alt="Slide 2">
+        </div>
+        <div class="carousel-slide">
+            <img src="/assets/carousel2.png" alt="Slide 3">
+        </div>
+        <!-- Add more slides as needed -->
+    
+        <!-- Navigation buttons -->
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+
+    </section>
+
+    <section class="CriticallyAcclaimed">
+      <div class="movie-section">
+        <h2>Critically Acclaimed</h2>
+        <div class="movie-cards" id="movieCards1">
+            <!-- Example Movie Cards -->
+            <a href="/homeSearch?movieTitle=tt7465992" class="critical">
+            <div class="movie-card">
+                <img src="/assets/critically acclaimed/mahanati.jpg" alt="Movie 1">
+                <div class="movie-info">
+                    <h3>Mahanati</h3>
+                </div>
+            </div>
+            </a>
+
+            <a href="/homeSearch?movieTitle=tt7391996" class="critical">
+            <div class="movie-card">
+                <img src="/assets/critically acclaimed/kancharapalem.jpg" alt="Movie 2">
+                <div class="movie-info">
+                    <h3>C/o Kancharapalem</h3>
+                </div>
+            </div>
+            </a>
+
+            <a href="/homeSearch?movieTitle=tt7019942" class="critical">
+            <div class="movie-card">
+              <img src="/assets/critically acclaimed/super delux.jpg" alt="Movie 2">
+              <div class="movie-info">
+                  <h3>Super Delux</h3>
+              </div>
+            </div>
+            </a>
+
+          <a href="/homeSearch?movieTitle=tt5867800" class="critical">
+          <div class="movie-card">
+            <img src="/assets/critically acclaimed/aruvi.jpg" alt="Movie 2">
+            <div class="movie-info">
+                <h3>Aruvi</h3>
+            </div>
+          </div>
+          </a>
+        
+        <a href="/homeSearch?movieTitle=tt4635372" class="critical">
+        <div class="movie-card">
+          <img src="/assets/critically acclaimed/masaan.jpg" alt="Movie 2">
+          <div class="movie-info">
+              <h3>Masaan</h3>
+          </div>
+        </div>
+        </a>
+
+        <a href="/homeSearch?movieTitle=tt0068646" class="critical">
+        <div class="movie-card">
+          <img src="/assets/critically acclaimed/the god father.jpg" alt="Movie 2">
+          <div class="movie-info">
+              <h3>The Godfather</h3>
+          </div>
+        </div>
+        </a>
+
+        <a href="/homeSearch?movieTitle=tt0469494" class="critical">
+        <div class="movie-card">
+          <img src="/assets/critically acclaimed/there will be blood.jpg" alt="Movie 1">
+          <div class="movie-info">
+              <h3>There Will Be Blood</h3>
+          </div>
+      </div>
+      </a>
+
+      <a href="/homeSearch?movieTitle=tt8413338" class="critical">
+      <div class="movie-card">
+          <img src="/assets/critically acclaimed/kumbalangi nights.jpg" alt="Movie 2">
+          <div class="movie-info">
+              <h3>Kumbalangi Nights</h3>
+          </div>
+      </div>
+      </a>
+
+      <a href="/homeSearch?movieTitle=tt4881362" class="critical">
+      <div class="movie-card">
+        <img src="/assets/critically acclaimed/thithi.jpg" alt="Movie 2">
+        <div class="movie-info">
+            <h3>Thithi</h3>
+        </div>
+      </div>
+      </a>
+            <!-- more movie cards-->
+        </div>
+        <button class="scroll-btn" id="scrollLeft1">←</button>
+        <button class="scroll-btn" id="scrollRight1">→</button>
+    </div>
+
+    </section>
+
+
+
+    <section class="AwardWinners">
+      <div class="movie-section">
+        <h2>Award Winners</h2>
+        <div class="movie-cards" id="movieCards2">
+            <!-- Example Movie Cards -->
+
+            <a href="/homeSearch?movieTitle=tt2631186" class="award">
+            <div class="movie-card">
+                <img src="/assets/award winners/bahubali.jpg" alt="Movie 1">
+                <div class="movie-info">
+                    <h3>Baahubali</h3>
+                </div>
+            </div>
+            </a>
+
+            <a href="/homeSearch?movieTitle=tt2258337" class="award">
+            <div class="movie-card">
+                <img src="/assets/award winners/eega.jpg" alt="Movie 2">
+                <div class="movie-info">
+                    <h3>Eega</h3>
+                </div>
+            </div>
+            </a>
+
+            <a href="/homeSearch?movieTitle=tt0093603" class="award">
+            <div class="movie-card">
+              <img src="/assets/award winners/nayakan.jpg" alt="Movie 2">
+              <div class="movie-info">
+                  <h3>Nayakan</h3>
+              </div>
+            </div>
+            </a>
+
+            <a href="/homeSearch?movieTitle=tt8176054" class="award">
+          <div class="movie-card">
+            <img src="/assets/award winners/pariyerum.jpg" alt="Movie 2">
+            <div class="movie-info">
+                <h3>Pariyerum Perumal</h3>
+            </div>
+          </div>
+          </a>
+
+          <a href="/homeSearch?movieTitle=tt0169102" class="award">
+        <div class="movie-card">
+          <img src="/assets/award winners/lagaan.jpg" alt="Movie 2">
+          <div class="movie-info">
+              <h3>Lagaan</h3>
+          </div>
+        </div>
+        </a>
+
+        <a href="/homeSearch?movieTitle=tt2395469" class="award">
+        <div class="movie-card">
+          <img src="/assets/award winners/gully boy.jpg" alt="Movie 2">
+          <div class="movie-info">
+              <h3>Gully Boy</h3>
+          </div>
+        </div>
+        </a>
+
+        <a href="/homeSearch?movieTitle=tt0477348" class="award">
+        <div class="movie-card">
+          <img src="/assets/award winners/no country for old man.jpg" alt="Movie 1">
+          <div class="movie-info">
+              <h3>No Country for Old Men</h3>
+          </div>
+      </div>
+      </a>
+
+      <a href="/homeSearch?movieTitle=tt5580390" class="award">
+      <div class="movie-card">
+          <img src="/assets/award winners/the shape of water.jpg" alt="Movie 2">
+          <div class="movie-info">
+              <h3>The Shape of Water</h3>
+          </div>
+      </div>
+      </a>
+
+      <a href="/homeSearch?movieTitle=tt4430212" class="award">
+      <div class="movie-card">
+        <img src="/assets/award winners/drishyam.jpg" alt="Movie 2">
+        <div class="movie-info">
+            <h3>Drishyam</h3>
+        </div>
+      </div>
+      </a>
+
+      <a href="/homeSearch?movieTitle=tt7838252" class="award">
+      <div class="movie-card">
+        <img src="/assets/award winners/kgf chapter 1.jpg" alt="Movie 2">
+        <div class="movie-info">
+            <h3>K.G.F: Chapter 1</h3>
+        </div>
+      </div>
+      </a>
+            <!-- more movie cards-->
+        </div>
+        <button class="scroll-btn" id="scrollLeft2">←</button>
+        <button class="scroll-btn" id="scrollRight2">→</button>
+    </div>
+
+    </section>
+
+
+    <section class="favorites">
+      <div class="movie-section">
+        <h2>Timeless Favorites</h2>
+        <div class="movie-cards" id="movieCards3">
+            <!-- Example Movie Cards -->
+
+            <a href="/homeSearch?movieTitle=tt0248428" class="timeless">
+            <div class="movie-card">
+                <img src="/assets/Timeless Favorites/shiva.jpg" alt="Movie 1">
+                <div class="movie-info">
+                    <h3>Shiva</h3>
+                </div>
+            </div>
+            </a>
+
+            <a href="/homeSearch?movieTitle=tt0187115" class="timeless">
+            <div class="movie-card">
+                <img src="/assets/Timeless Favorites/Kshana Kshanam.jpg" alt="Movie 2">
+                <div class="movie-info">
+                    <h3>Kshana Kshanam</h3>
+                </div>
+            </div>
+            </a>
+
+            <a href="/homeSearch?movieTitle=tt1547442" class="timeless">
+            <div class="movie-card">
+              <img src="/assets/Timeless Favorites/ayirathil oruvan.jpg" alt="Movie 2">
+              <div class="movie-info">
+                  <h3>Aayirathil Oruvan</h3>
+              </div>
+            </div>
+            </a>
+
+          <a href="/homeSearch?movieTitle=tt0091559" class="timeless">
+          <div class="movie-card">
+            <img src="/assets/Timeless Favorites/mouna raagam.jpg" alt="Movie 2">
+            <div class="movie-info">
+                <h3>Mouna Ragam</h3>
+            </div>
+          </div>
+          </a>
+
+        <a href="/homeSearch?movieTitle=tt0109117" class="timeless">
+        <div class="movie-card">
+          <img src="/assets/Timeless Favorites/andaz.jpg" alt="Movie 2">
+          <div class="movie-info">
+              <h3>Andaz Apna Apna</h3>
+          </div>
+        </div>
+        </a>
+
+
+        <a href="/homeSearch?movieTitle=tt0085743" class="timeless">
+        <div class="movie-card">
+          <img src="/assets/Timeless Favorites/jaane bhi do yaaro.jpg" alt="Movie 2">
+          <div class="movie-info">
+              <h3>Jaane Bhi Do Yaaro</h3>
+          </div>
+        </div>
+        </a>
+
+
+      <a href="/homeSearch?movieTitle=tt0118715" class="timeless">
+      <div class="movie-card">
+          <img src="/assets/Timeless Favorites/the big lobowski.jpg" alt="Movie 2">
+          <div class="movie-info">
+              <h3>The Big Lebowski</h3>
+          </div>
+      </div>
+      </a>
+
+      <a href="/homeSearch?movieTitle=tt0137523" class="timeless">
+      <div class="movie-card">
+        <img src="/assets/Timeless Favorites/fight club.jpg" alt="Movie 2">
+        <div class="movie-info">
+            <h3>Fight Club</h3>
+        </div>
+      </div>
+      </a>
+
+
+      <a href="/homeSearch?movieTitle=tt0088907" class="timeless">
+      <div class="movie-card">
+        <img src="/assets/Timeless Favorites/chidambaram.jpg" alt="Movie 2">
+        <div class="movie-info">
+            <h3>Chidambaram</h3>
+        </div>
+      </div>
+      </a>
+
+
+      <a href="/homeSearch?movieTitle=tt0986329" class="timeless">
+      <div class="movie-card">
+        <img src="/assets/Timeless Favorites/mungaru male.jpg" alt="Movie 2">
+        <div class="movie-info">
+            <h3>Mungaru Male</h3>
+        </div>
+      </div>
+      </a>
+
+            <!-- more movie cards-->
+        </div>
+        <button class="scroll-btn" id="scrollLeft3">←</button>
+        <button class="scroll-btn" id="scrollRight3">→</button>
+    </div>
+
+    </section>
+
+
+    <%- include('partials/footer') %>
+

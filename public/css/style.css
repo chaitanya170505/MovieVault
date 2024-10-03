@@ -1,0 +1,250 @@
+/*normalisation code*/
+body{
+    background-color: #27374D;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    outline: 0px;
+    box-sizing: border-box;
+     /* WebKit Browsers */
+     ::-webkit-scrollbar {
+        display: none;
+    }
+    
+    /* Firefox */
+    scrollbar-width: none;
+    
+    /* Internet Explorer and Edge */
+    -ms-overflow-style: none;
+}
+
+/*header styles*/
+.header{
+    background-color: #252A34;
+}
+
+.header-color {
+    color: #EAEAEA !important;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+  }
+  
+ .header-color:hover {
+    color:  #FF2E63 !important;
+  }
+
+  .form-control:focus{
+    transition: width 1s ease !important;
+    }
+
+  @media (min-width: 1005px) {
+    .form-control:focus{
+        width: 400px;
+    }
+  }
+  
+  .dropdown-toggle::after {
+    color: white; 
+}
+
+  
+
+  /*https://colorhunt.co/palette/08d9d6252a34ff2e63eaeaea*/
+  
+  
+  
+
+/*carousel*/
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    
+}
+
+@media (width<=1000px) {
+    .carousel-container {
+        height: 50vh;
+    }
+}
+
+@media (width>1000px) {
+    .carousel-container {
+        height: 70vh;
+    }
+}
+
+.carousel-slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.5s ease;
+}
+
+.carousel-slide.active {
+    display: block;
+    opacity: 1;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    background-color: #3c3c3d;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/*popular movie section*/
+
+.movie-section {
+    position: relative;
+    padding: 20px;
+    text-align: center;
+}
+
+.movie-section h2{
+    color: #27374D;
+}
+
+.movie-cards {
+    max-height: 400px;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px 0;
+}
+
+.movie-card {
+    background-color: #252A34;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0 10px;
+    min-width: 200px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 5px 3px #08D9D6;
+}
+
+.movie-card img {
+    max-height: 250px;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.movie-info {
+    padding: 10px;
+}
+
+.movie-info h3{
+    color: #FF2E63 ;
+}
+
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 1;
+}
+
+.movie-info h3{
+    font-size: 1rem;
+}
+
+#scrollLeft1 {
+    left: 10px;
+}
+
+#scrollRight1 {
+    right: 10px;
+}
+
+#scrollLeft2 {
+    left: 10px;
+}
+
+#scrollRight2 {
+    right: 10px;
+}
+
+#scrollLeft3 {
+    left: 10px;
+}
+
+#scrollRight3 {
+    right: 10px;
+}
+
+
+/*latest movie section styles*/
+
+.CriticallyAcclaimed{
+    background-color: rgb(197, 201, 201);
+}
+
+.AwardWinners{
+    background-color: #EAEAEA;
+}
+
+.favorites{
+    background-color: rgb(197, 201, 201);
+}
+
+.critical{
+    text-decoration: none;
+}
+
+.award{
+    text-decoration: none;
+}
+
+.award{
+    text-decoration: none;
+}
+
+.timeless{
+    text-decoration: none;
+}
+
+
+/*footer styles*/
+.footer{
+    background-color: #252A34;
+    color: white;
+}

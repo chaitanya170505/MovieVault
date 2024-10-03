@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="/css/profile.css">
+</head>
+<body>
+
+<div class="profile-section" id="profile-section">
+    <h2>User Profile</h2>
+    <hr>
+    <br>
+    <div class="profile-header">
+        <img src="/assets/profile.png" alt="Profile Picture" class="profile-picture" id="profile-picture">
+    </div>
+    <div class="profile-details">
+        <p><strong>Username:</strong> <span id="username"><%= user.username %></span></p>
+        <p><strong>Email:</strong> <span id="usermail"><%= user.email %></span></p>
+    </div>
+    <div class="profile-actions">
+        <a href="#" id="edit-button">Edit Profile</a>
+        <a href="/auth/logout">Logout</a>
+    </div>
+</div>
+
+
+<div class="edit-profile-section hidden" id="edit-profile-section">
+    <h2>Edit Profile</h2>
+    <form action="/update-profile" method="POST">
+        <div class="form-group">
+            <label for="edit-username">Username</label>
+            <input type="text" id="edit-username" name="username" value="<%= user.username %>" required>
+        </div>
+        <div class="form-group">
+            <label for="edit-usermail">Email</label>
+            <input type="email" id="edit-usermail" name="usermail" value="<%= user.email %>" required>
+        </div>
+        <div class="form-actions">
+            <button type="submit">Save Changes</button>
+            <button type="button" id="cancel-edit">Cancel</button>
+        </div>
+    </form>
+</div>
+
+<script src="/js/editprofile.js"></script>
+
+</body>
+</html>

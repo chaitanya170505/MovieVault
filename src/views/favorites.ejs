@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="/css/pages.css">
+<%- include('partials/header') %>
+
+<div class="favorites-section">
+    <div class="heading">
+        <h1>Favorites</h1>
+        <hr>
+    </div>
+<% if (favorites && favorites.length > 0) { %>
+    <% favorites.forEach(movie => { %>
+        <div class="movie-display-container">
+            <div class="movie-display-img-container">
+                <img src="<%= movie.poster %>" class="movie-display-img" alt="<%= movie.title %>">
+            </div>
+            <div class="movie-display-description">
+                <h3 class="movie-display-heading"><%= movie.title %></h3>
+                <hr>
+                <p class="movie-display-description"><%= movie.plot %></p>
+                <div class="movie-links">
+                    <a href="/homeSearch?movieTitle=<%= movie.movie_id %>">More Info</a>
+                    <a href="/favorites/remove/<%= movie.movie_id %>">Remove</a>
+                </div>
+            </div>
+        </div>
+    <% }); %>
+<% } else { %>
+    <div class="empty-list">
+        <p>You haven't added any movies to your favorites yet.</p>
+    </div>    
+<% } %>
+</div>
+
+<%- include('partials/footer') %>
